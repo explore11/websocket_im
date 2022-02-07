@@ -6,3 +6,8 @@ spring:
       uri: mongodb://192.168.1.6:27017/message
   application:
     name: WEBSOCKET-IM
+rocketmq:
+  name-server: 192.168.10.100:9876
+  producer:
+    group: im-group
+

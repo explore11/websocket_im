@@ -5,3 +5,9 @@ http://www.yunjson.com/websocket/
 分布式情况下可以考虑使用mq的广播模式进行消息发送
 参考地址
 https://www.cnblogs.com/lm970585581/p/13691240.html
+
+消息内容
+{
+"toId":1002,
+"msg":"你好"
+}
