@@ -4,6 +4,7 @@ import com.song.websocket_im.pojo.Message;
 import com.song.websocket_im.pojo.User;
 import com.song.websocket_im.pojo.UserData;
 import com.song.websocket_im.service.MessageService;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -19,6 +20,16 @@ public class UserController {
 
     @Resource
     private MessageService messageService;
+
+    @Resource
+    private RedisTemplate redisTemplate;
+
+    @GetMapping("/test")
+    public String test() {
+        redisTemplate.opsForValue().set("a","a");
+        return "ok";
+    }
+
 
     //拉取用户列表（模拟实现）
     @GetMapping
